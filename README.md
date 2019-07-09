@@ -44,7 +44,7 @@ If you'd like to download and build locally, please follow the steps below.
 
 ## Usage
 
-### Install [TronWeb](https://github.com/tronprotocol/tron-web)
+### Install [TronWeb](https://github.com/Tron-US/tronweb)
 
 ### NPM
 ```bash
