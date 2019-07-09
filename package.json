@@ -1,6 +1,6 @@
 {
   "name": "tronstation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Javascript API Library for estimating Tron energy and bandwidth consumption based on Tron network.",
   "main": "dist/tronstation-sdk.node.js",
   "scripts": {
