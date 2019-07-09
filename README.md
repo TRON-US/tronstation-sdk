@@ -87,12 +87,12 @@ const newTronWeb = new TronWeb(
 );
 tronStation.setTronWeb(tronWeb);
 ```
-### APIs
+## APIs
 
 TronStation-SDK provides three parts of calculators and some of utils can be used easily to estimate energy, bandwidth and super representatives data.
 There are also some sample usages provided in test directory.
 
-## Energy Calculators
+### Energy Calculators
 ```js
 // 1. Converter between frozen energy and trx amount.
 const res = await tronStation.energy.trx2FrozenEnergy(1);
@@ -112,7 +112,7 @@ const res = await tronStation.energy.burnedEnergy2Trx(10e4, { unit: 'sun' });
 const res = await tronStation.energy.getMaxEnergyLimit('your hex address', 1000);
 ```
 
-## Bandwidth Calculators
+### Bandwidth Calculators
 ```js
 // 1. Converter between frozen bandwidth points and trx amount.
 const res = await tronStation.bp.trx2FrozenBandwidth(1);
@@ -125,7 +125,7 @@ const res = await tronStation.bp.frozenBandwidth2Trx(7300.356788039041, { unit: 
 const res = await tronStation.bp.getAccountBandwidth('4165519569C1A1E81646902142DD56A791DEBCB0D8');
 ```
 
-## Super Representatives Calculators
+### Super Representatives Calculators
 ```js
 // 1. Calculator for estimating rank and votes reward by votes amount.
 // existed SR/Candidate
@@ -136,4 +136,19 @@ const res = await tronStation.witness.calculateSrReward(1000);
 
 // 2. API for getting current SR reward list.
 const res = await tronStation.witness.getSrVoteRewardList();
+```
+
+###Other tools
+```js
+// 1. Convert between trx and sun.
+const res = await tronStation.apis.fromTrx(1);
+const res = await tronStation.apis.toTrx(10e5);
+
+// 2. Get account resource by name.
+const res = await tronStation.apis.getResourceByName('EnergyWeight');
+const res = await tronStation.apis.getResourcesByName(['TotalNetLimit', 'TotalNetWeight']);
+
+// 3. Get proposals by name.
+const res = await tronStation.apis.getChainParameterByName('getEnergyFee');
+const res = await tronStation.apis.getChainParametersByName(['getTotalEnergyLimit', 'getEnergyFee']);
 ```
