@@ -133,7 +133,6 @@ const res = await tronStation.witness.calculateSrReward(1000, '41928c9af06516321
 // New SR/Candidate
 const res = await tronStation.witness.calculateSrReward(1000);
 
-
 // 2. API for getting current SR reward list.
 const res = await tronStation.witness.getSrVoteRewardList();
 ```
