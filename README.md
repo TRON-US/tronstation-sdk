@@ -18,17 +18,17 @@ You can also ship Tron Station SDK in a Chrome extension.
 
 ## Installation
 
-__[Tron Station SDK - NPM Package](https://www.npmjs.com/package/tron-station-sdk)__
+__[Tron Station SDK - NPM Package](https://www.npmjs.com/package/tronstation)__
 
 
 ### NPM
 ```bash
-> npm install tronstation-sdk
+> npm install tronstation
 ```
 
 ### Yarn
 ```bash
-> yarn add tronstation-sdk
+> yarn add tronstation
 ```
 
 ## Build Steps
@@ -59,7 +59,7 @@ If you'd like to download and build locally, please follow the steps below.
 ### Initialize TronWeb and create Tron Station SDK instance
 
 ```js
-import TronStation from 'tronstation-sdk';
+import TronStation from 'tronstation';
 import TronWeb from 'tronweb';
 
 const fullNode = new HttpProvider('https://api.trongrid.io');
