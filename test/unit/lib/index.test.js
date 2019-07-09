@@ -24,7 +24,7 @@ describe('#index functional unit test', function () {
             assert.equal(res.rewardList.length, 1);
             const newTronWeb = new TronWeb({
                 fullHost: 'https://api.trongrid.io',
-                privateKey: 'da146374a75310b9666e834ee4ad0866d6f4035967bfc76217c5a495fff9f0d0'
+                privateKey: 'your private key'
             });
             tronStation.setTronWeb(newTronWeb)
             res = await tronStation.witness.getSrVoteRewardList()
